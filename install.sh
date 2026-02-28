@@ -11,6 +11,16 @@ fi
 echo "Creating ~/tmp directory..."
 mkdir -p ~/tmp
 cd ~/tmp
+
+if [ -d "$HOME/tmp/dotfiles" ]; then
+  echo -n "The ~/tmp/dotfiles directory already exists. Do you want to delete it? [y/n]: "
+  read answer
+  if [[ 'n' != $answer && 'N' != $answer ]]; then
+    echo "Removing ~/tmp/dotfiles/ directory."
+    rm -rf ~/tmp/dotfiles
+  fi
+fi
+
 git clone https://github.com/Pumbiwe/dotfiles
 cd dotfiles
 echo "Success."
