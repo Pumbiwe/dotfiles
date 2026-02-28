@@ -1,9 +1,24 @@
+os=$(cat /etc/os-release | grep -e "^NAME=*")
+if [[ $os != "NAME=\"Arch Linux\"" ]]; then
+  echo -n "You are not using Arch Linux. Do you want to continue? [y/n]: "
+  read answer
+  if [[ 'n' == $answer || 'N' == $answer ]]; then
+    echo "Bye!"
+    exit 0
+  fi
+fi
+
+echo "Creating ~/tmp directory..."
+mkdir -p ~/tmp
+cd ~/tmp
+git clone https://github.com/Pumbiwe/dotfiles
+cd dotfiles
+echo "Success."
+
 sudo pacman -Syu sddm awesome git nautilus alacritty vim neovim code polkit-gnome rofi zsh fastfetch lxappearance dpkg qt6-5compat qt5 loupe scrot cmake firefox debugedit make fakeroot gcc i3-wm i3status feh polybar github-cli --noconfirm
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mrtazz"/' ~/.zshrc
 # Install yay
-mkdir ~/tmp
 git clone https://aur.archlinux.org/yay.git ~/tmp/yay
 (cd ~/tmp/yay && makepkg -si --noconfirm)
 
@@ -21,7 +36,7 @@ cp -r wallpaper ~/
 cp -r config/* ~/.config
 
 # zshrc
-sudo echo "$(<.zshrc )" > ~/.zshrc
+sudo echo "$(<.zshrc)" >~/.zshrc
 
 # Firefox theme
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/user.js -o ~/.mozilla/firefox/user.js
