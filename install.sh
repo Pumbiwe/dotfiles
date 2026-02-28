@@ -53,6 +53,9 @@ packages=(sddm
   i3status
   feh
   polybar
+  maim
+  xclip
+  dunst
   github-cli)
 
 echo "List of packages: "
