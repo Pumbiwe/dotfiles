@@ -22,7 +22,7 @@ cp -r wallpaper ~/
 cp -r config/* ~/.config
 
 # zshrc
-sudo echo "$(<config/.zshrc )" > ~/.zshrc
+sudo echo "$(<.zshrc )" > ~/.zshrc
 
 # Firefox theme
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/user.js -o ~/.mozilla/firefox/user.js
