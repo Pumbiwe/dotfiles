@@ -43,11 +43,6 @@ cp rofi/spotlight-dark.rasi ~/.local/share/rofi/themes/
 # LazyVim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 
-# Volume controller
-sudo cp volumeControl /bin/
-
-sudo echo "$(<config/etc.rc.lua )" > /etc/xdg/awesome/rc.lua
-
 echo "Successfully installed dotfiles! Have a nice day!"
 systemctl enable sddm
 systemctl restart sddm
