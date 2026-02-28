@@ -7,36 +7,3 @@
 > git clone https://github.com/Pumbiwe/my-awesomewm-dotfiles/<br/>
 > cd my-awesomewm-dotfiles<br/>
 > ./install.sh
-
-
-# Customize your theme
-> lxappearance
-
-# Packages
-1. telegram-desktop
-2. sddm
-3. awesome
-4. git
-5. nautilus
-6. alacritty
-7. nitrogen
-8. vim
-9. neovim
-10. code
-11. polkit-gnome
-12. rofi
-13. zsh
-14. neofetch
-15. lxappearance
-16. dpkg
-17. qt6-5compat
-18. qt5
-19. loupe
-20. scrot
-21. cmake
-22. picom
-23. firefox
-24. ttf-iosevka-nerd
-25. catppuccin-cursors-mocha
-26. orchis-theme
-27. postman-bin
