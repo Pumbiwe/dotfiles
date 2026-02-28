@@ -11,6 +11,7 @@ exec --no-startup-id feh --bg-scale ~/wallpaper/gp.png
 exec --no-startup-id setxkbmap -layout us,ru
 exec --no-startup-id setxkbmap -option 'grp:alt_shift_toggle'
 exec --no-startup-id polybar
+exec --no-startup-id picom
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
