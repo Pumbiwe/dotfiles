@@ -8,12 +8,11 @@ git clone https://aur.archlinux.org/yay.git ~/tmp/yay
 (cd ~/tmp/yay && makepkg -si --noconfirm)
 
 # Installing paru pkgs
-yay -S ttf-iosevka-nerd catppuccin-cursors-mocha orchis-theme postman-bin --noconfirm
+yay -S ttf-iosevka-nerd catppuccin-cursors-mocha orchis-theme postman-bin sddm-theme-noctalia-git --noconfirm
 
 # sddm theme
-sudo git clone https://github.com/kamack38/sddm-greenleaf-theme.git /usr/share/sddm/themes/greenleaf
 echo "[Theme]
-Current=greenleaf" | sudo tee /etc/sddm.conf
+Current=noctalia" | sudo tee /etc/sddm.conf
 
 # Set wallpaper
 cp -r wallpaper ~/
