@@ -91,7 +91,6 @@ echo -n "Do you want to install yay? [y/n]: "
 read answer
 if [[ 'n' == $answer || 'N' == $answer ]]; then
   echo "Ok."
-  exit 0
 else
 # Install yay
 git clone https://aur.archlinux.org/yay.git ~/tmp/yay
@@ -114,7 +113,6 @@ echo -n "Do you want to install these packages? [y/n]: "
 read answer
 if [[ 'n' == $answer || 'N' == $answer ]]; then
   echo "Ok, bye!"
-  exit 0
 fi
 for var in "${packages[@]}"; do
   yay -S $var --noconfirm
