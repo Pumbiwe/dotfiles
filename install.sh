@@ -68,7 +68,7 @@ echo -n "Do you want to install these packages? [y/n]: "
 read answer
 if [[ 'n' == $answer || 'N' == $answer ]]; then
   echo "Ok."
-fi
+else
 sudo pacman -Syu
 for var in "${packages[@]}"; do
   sudo pacman -S $var --noconfirm
@@ -77,6 +77,7 @@ for var in "${packages[@]}"; do
     read -p "Press [Enter] to continue..."
   fi
 done
+fi
 
 
 echo -n "Do you want to install zsh? [y/n]: "
