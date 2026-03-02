@@ -67,8 +67,7 @@ done
 echo -n "Do you want to install these packages? [y/n]: "
 read answer
 if [[ 'n' == $answer || 'N' == $answer ]]; then
-  echo "Ok, bye!"
-  exit 0
+  echo "Ok."
 fi
 sudo pacman -Syu
 for var in "${packages[@]}"; do
@@ -115,8 +114,8 @@ done
 echo -n "Do you want to install these packages? [y/n]: "
 read answer
 if [[ 'n' == $answer || 'N' == $answer ]]; then
-  echo "Ok, bye!"
-fi
+  echo "Ok."
+else
 for var in "${packages[@]}"; do
   yay -S $var --noconfirm
   if [[ $? == 1 ]]; then
@@ -124,7 +123,7 @@ for var in "${packages[@]}"; do
     read -p "Press [Enter] to continue..."
   fi
 done
-
+fi
 
 echo -n "Do you want to install noctalia sddm theme? [y/n]: "
 read answer
