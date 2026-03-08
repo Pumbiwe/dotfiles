@@ -103,7 +103,6 @@ fi
 packages=(ttf-iosevka-nerd 
   catppuccin-cursors-mocha
   orchis-theme
-  postman-bin
   sddm-theme-noctalia-git)
 
 echo "List of packages: "
