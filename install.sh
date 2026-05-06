@@ -101,7 +101,6 @@ git clone https://aur.archlinux.org/yay.git ~/tmp/yay
 fi
 
 packages=(ttf-iosevka-nerd 
-  catppuccin-cursors-mocha
   orchis-theme
   sddm-theme-noctalia-git)
 
