@@ -85,7 +85,7 @@ read answer
 if [[ 'n' == $answer || 'N' == $answer ]]; then
   echo "Ok."
 else
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/tools/install.sh)"
 sudo echo "$(<.zshrc)" >~/.zshrc
 fi
 
