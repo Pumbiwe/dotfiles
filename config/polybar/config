@@ -6,7 +6,7 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #6289aa
 alert = #bd2c40
-accent = #6289aa
+accent = #F04E3E
 
 [bar/mybar]
 width = 100%

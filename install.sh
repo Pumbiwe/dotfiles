@@ -100,6 +100,9 @@ git clone https://aur.archlinux.org/yay.git ~/tmp/yay
 (cd ~/tmp/yay && makepkg -si --noconfirm)
 fi
 
+git clone --depth=1 https://github.com/adi1090x/rofi.git
+(cd ~/tmp/rofi && chmod +x setup.sh && ./setup.sh)
+
 packages=(ttf-iosevka-nerd 
   orchis-theme
   sddm-theme-noctalia-git)

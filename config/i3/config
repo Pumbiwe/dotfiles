@@ -4,7 +4,8 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-scale ~/wallpaper/bg.png
+exec --no-startup-id xrandr --output VGA-1 --off
+exec --no-startup-id feh --bg-scale ~/wallpaper/a_logo_with_a_circle_and_text.png
 exec --no-startup-id setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'
 exec --no-startup-id picom
 exec --no-startup-id polybar
@@ -58,7 +59,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 
-bindsym $mod+r exec rofi -show drun -theme ~/.local/share/rofi/themes/spotlight-dark
+#bindsym $mod+r exec rofi -show drun -theme /usr/share/rofi/themes/Adapta-Nokto
+bindsym $mod+r exec /home/rodionov/.config/rofi/launchers/type-7/launcher.sh
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 
 set $ws1 "1"
@@ -93,6 +95,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -123,3 +126,17 @@ for_window [class=".*"] border pixel 0
 client.focused          $accent $bg-color $text-color $accent
 client.focused_inactive $inactive-bg $inactive-bg $text-color $inactive-bg
 client.unfocused        $inactive-bg $inactive-bg $text-color $inactive-bg
+
+
+workspace 1 output DVI-D-0
+workspace 2 output DVI-D-0
+workspace 3 output DVI-D-0
+workspace 4 output DVI-D-0
+workspace 5 output DVI-D-0
+
+# Рабочие столы 6-10 — на втором мониторе (справа, VGA-1)
+workspace 6 output VGA-0
+workspace 7 output VGA-0
+workspace 8 output VGA-0
+workspace 9 output VGA-0
+workspace 10 output VGA-0
