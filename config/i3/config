@@ -60,7 +60,8 @@ bindsym $mod+a focus parent
 
 
 #bindsym $mod+r exec rofi -show drun -theme /usr/share/rofi/themes/Adapta-Nokto
-bindsym $mod+r exec /home/rodionov/.config/rofi/launchers/type-7/launcher.sh
+bindsym $mod+r exec ~/.config/rofi/launchers/type-7/launcher.sh
+bindsym $mod+d exec ~/.config/rofi/powermenu/type-3/powermenu.sh
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 
 set $ws1 "1"
